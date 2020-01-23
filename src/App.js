@@ -49,7 +49,7 @@ class App extends React.Component {
     console.log('App component was updated!');
   }
 
-  changeColor = (event) => {
+  changeColor(event) {
     this.setState({background: event.target.value});
   }
 
@@ -79,7 +79,7 @@ class App extends React.Component {
             ? <UserList users={this.state.apiUsers}/>
             :null
         }
-        <input type="color" onChange={this.changeColor}/>
+        <input type="color" onChange={(event) => this.changeColor(event)}/>
       </div>
     );
   }
